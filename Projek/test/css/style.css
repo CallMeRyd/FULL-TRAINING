@@ -1,0 +1,110 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif, roboto;
+}
+
+.fcontainer {
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	border: 1px solid;
+	padding: 20px 20px;
+}
+
+.main li {
+	list-style-type: none;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+}
+
+.fone {
+	padding: 50px 50px;
+	background-color: crimson;
+	width: 50px;
+	hight: 50px;
+	position: fixed;
+	border: 1px solid;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	top: 0;
+	right: 0;
+}
+
+.one {
+	padding: 50px 50px;
+	background-color: blue;
+	width: 50px;
+	hight: 50px;
+	position: sticky;
+}
+
+.two {
+	padding: 50px 50px;
+	background-color: yellow;
+	width: 50px;
+	hight: 50px;
+	position: relative;
+	top: 0;
+	right: 0;
+}
+
+.tree {
+	padding: 50px 50px;
+	background-color: pink;
+	width: 50px;
+	hight: 50px;
+	position: sticky;
+	top: 10px;
+	border-radius: 50%;
+}
+
+.four {
+	padding: 50px 50px;
+	background-color: orange;
+	width: 50px;
+	hight: 50px;
+	position: block;
+}
+
+.five {
+	padding: 50px 50px;
+	background-color: crimson;
+	width: 50px;
+	hight: 50px;
+	position: block;
+}
+
+.six {
+	padding: 50px 50px;
+	background-color: red;
+	width: 50px;
+	hight: 50px;
+	position: block;
+}
+
+.seven {
+	padding: 50px 50px;
+	background-color: #233;
+	width: 50px;
+	hight: 50px;
+	position: block;
+}
+
+.eight {
+	padding: 50px 50px;
+	background-color: green;
+	width: 50px;
+	hight: 50px;
+	position: block;
+}
+
+.nine {
+	padding: 50px 50px;
+	background-color: purple;
+	width: 50px;
+	hight: 50px;
+	position: block;
+}

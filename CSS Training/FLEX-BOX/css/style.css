@@ -1,0 +1,32 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif, arial;
+}
+
+
+.container {
+	display: flex;
+	border: 3px solid;
+	width: 85%;
+	margin: 30px auto;
+/*	flex-direction: row | row-reverse | column | column-reverse;*/
+/*	flex-wrap: nowrap | wrap | wrap-reverse;*/
+/*	justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;*/
+/*	align-items: flex-start | flex-end | center | stretch | baseline;*/
+/*	align-content: flex-start | flex-end | center | stretch | space-between | space-around;*/
+}
+
+
+.container div {
+	width: 100px;
+	height: 100px;
+	background-color: rgb(19, 133, 255, 1.0);
+	margin: 3px;
+	text-align: center;
+}
+
+
+p {
+	margin-top: 39px;
+}

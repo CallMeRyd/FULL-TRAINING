@@ -1,0 +1,40 @@
+* {
+	font-family: sans-serif;
+	margin: 0;
+    padding: 0;
+}
+
+.dimensi {
+	background-color: aqua;
+	width: 200px;
+	height: 200px;
+	overflow: auto;
+}
+
+.dimensi h2 {
+	text-align: center;
+}
+
+.dimensi p {
+	margin-top: 20px;
+	padding: 0 20px;
+}
+
+.satu {
+	background-color: red;
+	width: 200px;
+	height: 200px;
+}
+
+.dua {
+	background-color: crimson;
+	width: 100px;
+	height: 100px;
+}
+
+.tiga {
+	background-color: orange;
+	width: 50px;
+	height: 50px;
+	margin: 50px auto;
+}
