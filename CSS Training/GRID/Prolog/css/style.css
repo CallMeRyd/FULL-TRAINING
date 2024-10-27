@@ -1,0 +1,92 @@
+/*
+	CSS Grid terminology
+
+		+> Grid container
+			adalah "Element pembungkus grid, didefiisikan dengan menuliskan : " 
+			  display: grid;
+
+		+> Grid item
+			adalah "Element-element yang berada (1 level) / children di dalam grid container"
+
+		+> Grid line
+			adalah "garis horizontal (kolom) / vertikal (baris) yang memisahkan grid menjadi beberapa bagian dan ditandai dengan angka."
+
+		+> Grid cell
+			adalah "perpotongan / pertemuan antara baris dan kolom di dalam grid."
+
+		+> Grid area
+			adalah "kumpulan lebih dari 1 cell yang membentuk kotak."
+
+		+> Grid track
+			adalah "ukuran / jarak antara 2 grid line, bisa horizontal (kolom) / vertikal (baris)."
+
+		+> Grid gap
+			adalah "jarak antara grid track / cell."
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: arial;
+	box-sizing: border-box;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.container {
+	width: 100%;
+	margin: 50px auto;
+	display: flex;
+	justify-content: center;
+	height: 40rem;
+}
+
+.box {
+	width: 70%;
+	padding: 6px;
+	border: 5px solid #333;
+	display: grid;
+	grid-template-areas: "header header" 
+						 "aside main" 
+						 "nav main" 
+						 "footer footer";	
+	grid-template-columns: 1fr 1.5fr;
+	grid-template-rows: 0.5fr 1fr 1.3fr;
+}
+
+header {
+	grid-area: header;
+	background-color: purple;
+	padding: 3rem 0;
+}
+
+aside {
+	grid-area: aside;
+	background-color: blue;
+	padding: 3rem 0;
+}
+
+nav {
+	grid-area: nav;
+	background-color: red;
+	padding: 4rem 0;
+}
+
+main {
+	grid-area: main;
+	background-color: orange;
+	padding: 9rem 0;
+}
+
+footer {
+	grid-area: footer;
+	background-color: grey;
+	padding: 1rem 0;
+}
+
+header, aside, nav, main, footer {
+	color: #fff;
+	text-align: center;
+}
+
+

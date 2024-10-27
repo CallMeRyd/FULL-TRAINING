@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>dom</title>
+	<style>
+		/** {
+			font-family: sans-serif;
+			border: 2px solid #dedede;
+			padding: 15px;
+			margin: 15px;
+		}
+		html {
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			max-width: 600px;
+			margin: 30px auto;
+			color: #333;
+		}*/
+
+		/*#b p {
+			color: green;
+		}
+		section#b ul li:nth-child(2) {
+			background-color: orange;
+		}*/
+
+/*		.p3:active {background-color: lightblue;}*/
+
+		body {
+			text-align: center;
+			font-family: sans-serif;
+		}
+
+		.btnVafColor {
+			font-size: 30px;
+			padding: 10px 30px;
+		}
+
+		.light-blue {
+			background-color: lightblue;
+		}
+
+		.kotak {
+			display: flex;
+			flex-direction: column;
+			width: 300px;
+			margin: 10px auto;
+			align-items: center;
+/*			border: 1px solid;*/
+		}
+
+		.sMerah, .sHijau, .sBiru{
+			width: 300px;
+			margin: 10px auto;
+		}
+
+		.merah {
+			background-color: red;
+			width: 60px;
+			height: 60px;
+		}
+
+		.hijau {
+			background-color: green;
+			width: 60px;
+			height: 60px;
+		}
+
+		.biru {
+			background-color: blue;
+			width: 60px;
+			height: 60px;
+		}
+
+	</style>
+</head>
+<body>
+	
+	<!-- <h1 id="judul">Hello World</h1>
+	<div id="container">
+		<section id="a">
+			<p class="p1 satu dua">paragraf 1</p>
+			<a href="https://github.com/">Github Call Me Ryd</a>
+			<p class="p2">paragraf 2</p>
+			 Inline HTML  onclick="ubahWarna()"-->
+	<!--		<p class="p3">paragraf 3</p>	
+		</section>
+		<section id="b">
+			<p>paragraf 4</p>
+			<ul>
+				<li>item 1</li>
+				<li>item 2</li>
+				<li>item 3</li>	
+			</ul>
+		</section>
+	</div> -->
+
+	<h1>Barmain Dengan Warna</h1>
+	<button type="button" class="btnVafColor">Vaf Color</button>
+
+	<br><br>
+
+	<div class="kotak">
+		<div class="merah"></div>
+		<input type="range" name="sMerah" class="sMerah" min="0" max="255">
+	</div>
+
+	<div class="kotak">
+		<div class="hijau"></div>
+		<input type="range" name="sHijau" class="sHijau" min="0" max="255">
+	</div>
+
+	<div class="kotak">
+		<div class="biru"></div>
+		<input type="range" name="sBiru" class="sBiru" min="0" max="255">
+	</div>
+
+<script src="dom.js"></script>	
+</body>
+</html>
