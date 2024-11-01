@@ -5,9 +5,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>RYD | Advertisement</title>
 	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Font -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Chokokutai&family=Oxygen:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+	<!-- Icon -->
+	<script src="https://kit.fontawesome.com/ebcccf8797.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -17,14 +22,16 @@
 			<!-- Header -->
 			<header>
 				<section>
-					<h1>RYD Merch Shop</h1>
+					<h1 class="oxygen-bold">RYD Merch Shop</h1>
 				</section>
-				<ul>
-					<li><a href="">HOME</a></li>
-					<li><a href="">GALLERY</a></li>
-					<li><a href="">ABOUT</a></li>
-					<li><a href="">SERVICE</a></li>
-				</ul>
+				<div class="right">	
+					<ul>
+						<li><a href="">HOME</a></li>
+						<li><a href="">GALLERY</a></li>
+						<li><a href="">ABOUT</a></li>
+					</ul>
+					<button class="login oxygen-bold"><a href="">LOGIN</a></button>
+				</div>
 			</header>
 		</div>
 	</div>
@@ -50,22 +57,22 @@
 
 			<!-- Card -->
 			<div class="cards">
-				<div class="card-1">
+				<div id="card" class="card card-1">
 					<div class="logo-1 logos"></div>
 					<h3>TUTORIAL</h3>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi magnam quibusdam nulla</p>
 				</div>
-				<div class="card-1">
+				<div id="card" class="card card-2">
 					<div class="logo-2 logos"></div>
 					<h3>GAME</h3>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi magnam quibusdam nulla</p>
 				</div>
-				<div class="card-1">
+				<div id="card" class="card card-3">
 					<div class="logo-3 logos"></div>
 					<h3>STREAMING</h3>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi magnam quibusdam nulla</p>
 				</div>
-				<div class="card-1">
+				<div id="card" class="card card-4">
 					<div class="logo-4 logos"></div>
 					<h3>BRANDS</h3>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi magnam quibusdam nulla</p>
@@ -77,26 +84,30 @@
 		<div class="mid">
 
 			<!-- Gallery -->
-			<h2 class="judul-gallery">Gallery</h2>
+			<h2 class="judul-gallery oxygen-bold">GALLERY</h2>
 			<div class="gallerys">
 				<div class="img-1"></div>
 			</div>
-			<div class="imgs baris1">
-				<div class="img1 imgG"></div>
-				<div class="img2 imgG"></div>
-				<div class="img3 imgG"></div>
-			</div>
-			<div class="imgs baris2">
-				<div class="img4 imgG"></div>
-				<div class="img5 imgG"></div>
-				<div class="img6 imgG"></div>
-			</div>
-			<div class="imgs baris3">
-				<div class="img7 imgG"></div>
-				<div class="img8 imgG"></div>
+			<div class="imgs">
+				<div class="img1 imgG">
+					<div class="bg-blur">
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis iusto quae ipsam earum, nihil unde aliquid libero, similique voluptate minima, reiciendis sequi, iste.</p>
+					 </div>
+				</div>
+				<div class="img2 imgG">
+					<div class="bg-blur">
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis iusto quae ipsam earum, nihil unde aliquid libero, similique voluptate minima, reiciendis sequi, iste. lorem40</p>
+					 </div>
+				</div>
+				<div class="img3 imgG">
+					<div class="bg-blur">
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis iusto quae ipsam earum, nihil unde aliquid libero, similique voluptate minima, reiciendis sequi, iste.</p>
+					 </div>
+				</div>
 			</div>
 		</div>
 	</div>
+
 
 	<div class="container3">
 		<div class="bawah">
@@ -105,14 +116,22 @@
 			<div class="about">
 				<h2 class="judul-about">About</h2>
 				<div class="about-text">
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil dolorem necessitatibus, ullam ipsum ipsa, nam quibusdam cumque consequuntur ea veritatis? Fuga odio explicabo consectetur vel alias incidunt dolor dicta! Molestiae?</p>
+					<p><strong>Lorem ipsum dolor</strong> sit, amet consectetur adipisicing elit. Nihil dolorem necessitatibus, ullam ipsum ipsa, nam quibusdam cumque consequuntur ea veritatis? Fuga odio explicabo consectetur vel alias incidunt dolor dicta! Molestiae?</p>
 					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt, expedita voluptates iusto eveniet reprehenderit amet placeat molestiae veniam, eligendi consectetur, eos, recusandae.</p>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, eius et libero inventore harum quasi fuga adipisci fugit quibusdam eos fugiat, perspiciatis, perferendis modi a vero numquam excepturi unde odio.</p>
 				</div>
 			</div>
 
 			<!-- Footer -->
 			<div class="footer">
-				<p>Create By.Ryd</p>
+				<h3 class="footer-title">Follow My Social Media Account</h3>
+				<div class="icons">
+					<a href="https://www.instagram.com/call_me_ryd?igsh=YzljYTk1ODg3Zg==" class="icon instagram"><i class="fa-brands fa-instagram fa-3x"></i></a>
+					<a href="https://github.com/CallMeRyd" class="icon github"><i class="fa-brands fa-github fa-3x"></i></a>
+					<a href="https://youtube.com/@mengsaddler1202?si=3TZHe-8QmFjdGv0i" class="icon youtube"><i class="fa-brands fa-youtube fa-3x"></i></a>
+					<a href="https://x.com/CallMeRyd?t=1C-1PqD3_4NLb9pNpz68Aw&s=08" class="icon twitter"><i class="fa-brands fa-x-twitter fa-3x"></i></a>
+				</div>
+				<p>Create By Ryd</p>
 			</div>
 		</div>
 	</div>
