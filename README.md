@@ -1,2 +1,2 @@
 # FULL-TRAINING
-All training are here (For Backup & Shearing)
+All training are here (For Backup & Sharing)
