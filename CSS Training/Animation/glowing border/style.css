@@ -17,6 +17,7 @@
 	position: relative;
 	text-align: center;
 	z-index: -99;
+	flex-direction: column;
 }
 
 h2 {
@@ -43,6 +44,20 @@ p {
 	position: relative; /* Beda Dari Sini */
 }
 
+@property --angle {
+	syntax: "<angle>";
+	initial-value: 0deg;
+	inherits: false;
+}
+
+@keyframes spin {
+	from {
+		--angle: 0deg;
+	}
+	to {
+		--angle: 360deg;
+	}
+}
 
 .box::after, .box::before {
 	content: '';
@@ -67,20 +82,6 @@ p {
 
 
 /* ME TIME :: */
-@property --angle {
-	syntax: "<angle>";
-	initial-value: 0deg;
-	inherits: false;
-}
-
-@keyframes spin {
-	from {
-		--angle: 0deg;
-	}
-	to {
-		--angle: 360deg;
-	}
-}
 
 #btn {
 	width: 15rem;
@@ -94,18 +95,18 @@ p {
 	font-size: 25px;
 	font-weight: bold;
 	position: relative;
-	transition: animation .3s ease-in-out;
 }
 
 #btn::after, #btn::before {
 	content: '';
 	position: absolute;
-	background: conic-gradient( red, blue, red);
+	background: conic-gradient(from var(--angle), transparent 5%, red, blue, red);
 	padding: 3px;
 	height: 100%;
 	width: 100%;
 	z-index: -1;
 	border-radius: 10px;
+	animation: spin 3s linear infinite;
 }
 
 #btn::before {
@@ -113,15 +114,5 @@ p {
 	opacity: 0.5;
 }
 
-#btn:hover::before {
-	opacity: 1;
-	animation: spin 3s linear infinite;
-	background: conic-gradient(from var(--angle), red, blue, red);
-}
-
-#btn:hover::after {
-	animation: spin 3s linear infinite;
-	background: conic-gradient(from var(--angle), red, blue, red);
-}
 
 

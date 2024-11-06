@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Glowing Button</title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+			font-family: sans-serif;
+			box-sizing: border-box;
+		}
+
+		body {
+			background-color: #161616;
+			display: flex;
+			width: 100%;
+			height: 100vh;
+			gap: 50px;
+			justify-content: center;
+			align-items: center;
+			overflow: hidden;
+			transform: scale(1.5);
+		}
+
+		.btn {
+			width: 10rem;
+			height: 4rem;
+			color: #fff;
+			font-size: 25px;
+			background-color: #616161;
+			border-radius: 10px;
+			cursor: pointer;
+			outline: none;
+			position: relative;
+			border: 1px solid #616161;
+		}
+
+		.btn::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			z-index: -1;
+			left: 0;
+			top: 0;
+			height: 100%;
+			border-radius: 10px;
+			background-color: #fff;
+		}
+
+		.btn::before {
+			content: '';
+			background: linear-gradient(45deg, red, purple, blue, skyblue, yellow, orange, white, darkred, darkblue, red);
+			position: absolute;
+			display: flex;
+			top: -2px;
+			left: -2px;
+			background-size: 600%;
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+			filter: blur(10px);
+			/* animation */
+			animation: glowing 20s linear infinite;
+			transition: opacity .3s ease-in-out;
+			border-radius: 10px;
+			opacity: 0;
+			transform: scale(1.1);
+		}
+
+		.btn1 {
+			width: 10rem;
+			height: 4rem;
+			color: #fff;
+			font-size: 25px;
+			background-color: #616161;
+			border-radius: 10px;
+			cursor: pointer;
+			outline: none;
+			position: relative;
+			border: 1px solid #616161;
+		}
+
+		.btn1::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			z-index: -1;
+			left: 0;
+			top: 0;
+			height: 100%;
+			border-radius: 10px;
+		}
+
+		.btn1::before {
+			content: '';
+			background: linear-gradient(45deg, red, purple, blue, skyblue, yellow, orange, white, darkred, darkblue, red);
+			position: absolute;
+			display: flex;
+			top: 0;
+			left: 0;
+			background-size: 600%;
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+			filter: blur(2px);
+			/* animation */
+			animation: glowing 20s linear infinite;
+			transition: opacity .3s ease-in-out;
+			border-radius: 10px;
+			opacity: 0;
+		}
+
+		@keyframes glowing {
+			0% {background-position: 0 0;}
+			50% {background-position: 400% 0;}
+			100% {background-position: 0 0;}
+		}
+
+		/* Hover */
+		.btn:hover::before {
+			opacity: 1;
+		}
+
+		.btn1:hover::before {
+			opacity: 1;
+		}
+
+		.btn1:hover {
+			background: transparent;
+		}
+	</style>
+</head>
+<body>
+	<button class="btn">Hover Me!</button>
+	<button class="btn1">Hover Me!</button>
+</body>
+</html>

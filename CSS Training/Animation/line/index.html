@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Animation Line</title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+			font-family: sans-serif;
+			box-sizing: border-box;
+		}
+
+		body {
+			background-color: #000;
+		}
+
+		a {
+			width: 250px;
+			height: 4rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			display: flex;
+			margin: 300px auto;
+			font-size: 50px;
+			text-decoration: none;
+			color: #fff;
+			position: relative;
+		}
+
+		a::before {
+			content: '';
+			position: absolute;
+			height: 5px;
+			width: 100%;
+			background-color: skyblue;
+			border-radius: 6px;
+			bottom: -1px;
+			transform: scaleX(0);
+			transition: transform 0.2s linear;
+		}
+
+		a:hover::before {
+			transform: scaleX(1.0);
+		}
+	</style>
+</head>
+<body>
+
+	<a href="">Animation</a>
+	
+</body>
+</html>
