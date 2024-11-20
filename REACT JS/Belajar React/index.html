@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>REACT | DOM Manipulation</title>
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Bagian React -->
+	<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+	<!-- Bagian Dari JSX -->
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+<body>
+	<!-- Bagian React -->
+	<div id="root"></div>
+
+	<div class="container">
+		<header>
+			<nav>
+				<div id="title">
+					<h2>REACT | DOM Manipulation</h1>
+				</div>
+			</nav>
+		</header>
+		
+		<div id="app"></div>
+	</div>
+	
+<script type="text/babel">	
+
+	// JS Vanila
+	const app = document.getElementById('app');
+
+	const tambahE = document.createElement('h3');
+	const tambahP = document.createTextNode('Lern React With Me');
+
+	tambahE.appendChild(tambahP);
+	app.appendChild(tambahE);
+
+	// React JS
+	const container = document.getElementById('root'); // Bagian React
+	const root = ReactDOM.createRoot(container);
+	root.render(<h1>Mari Bermain Bersama!!</h1>);
+
+</script>
+</body>
+</html>
