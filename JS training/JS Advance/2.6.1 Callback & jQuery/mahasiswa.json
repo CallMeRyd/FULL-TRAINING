@@ -1,0 +1,23 @@
+[
+	{
+		"nama"		: "Call Me Ryd",
+		"kelas"		: "1H",
+		"nim"			: "2413010718",
+		"email"		: "callmeryd111@gmail.com",
+		"idMahasiswa" : 1
+	},
+	{
+		"nama"		: "Hurakainnn",
+		"kelas"		: "1H",
+		"nim"			: "2413010728",
+		"email"		: "hurarakaa@gmail.com",
+		"idMahasiswa" : 2
+	},
+	{
+		"nama"		: "AmbaKazuito",
+		"kelas"		: "1H",
+		"nim"			: "2413010719",
+		"email"		: "zoooitoo@gmail.com",
+		"idMahasiswa" : 3
+	}
+];

@@ -8,6 +8,9 @@ function program(player, pilihanBot) {
   const indexBot = pemenang.indexOf(pilihanBot);
 
   return (indexPlayer == indexBot) ? 'SERI !!' : (indexPlayer == (indexBot + 1) % 3) ? 'MENANG !!' : 'KALAH !!';
+}
+function show(string, ...values) {
+	return string.reduce((result, str, i) => `${result}${str}<span class="result">${values[i] || ''}</span>`, '');
 }									
 
 let player = prompt(`Masukkan Pilihan Anda : `);
@@ -22,6 +25,10 @@ let result = program(player, pilihanBot);
 console.log (`Pilihan player \t:  ${player}`);
 console.log (`Pilihan Bot \t:  ${pilihanBot}`);
 console.log (`Hasil  \t\t\t:  ${result}`);
+
+
+const str = show `Player 		: ${player}<br>	Komputer 	: ${pilihanBot}<br>${result}`;
+document.body.innerHTML = str;
 
 
 
