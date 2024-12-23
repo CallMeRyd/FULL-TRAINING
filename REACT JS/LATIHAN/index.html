@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>RYD | React</title>
+
+    <!-- React -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Babel-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- CSS -->
+    <style>
+      * {
+        background-color: #eee;
+        font-family: arial;
+      }
+
+      .imgs {
+      	display: flex;
+      	gap: 5px;
+      }
+
+      img {
+      	width: 250px;
+      }
+
+      .btn-pr {
+      	display: flex;
+      	justify-content: center;
+      	align-items: center;
+      	width: 11rem;
+      	height: 4rem;
+      	position: relative;
+      	z-index: 0;
+      }
+
+      .btn {
+      	border: none;
+      	display: flex;
+      	justify-content: center;
+      	align-items: center;
+      	width: 10rem;
+      	height: 3rem;
+      	position: relative;
+      	border-radius: 10px;
+      }
+
+      @property --angle {
+      	syntax: "<angle>";
+      	initial-value: 0deg;
+      	inherits: false;
+      }
+
+      @keyframes spin {
+      	from {
+      		--angle: 0deg;
+      	}	
+      	to {
+      		--angle: 360deg;
+      	}
+      }
+
+      .btn::after, .btn::before {
+      	content: '';
+      	display: flex;
+      	justify-content: center;
+      	align-items: center;
+      	width: 100%;
+      	height: 100%;
+      	border-radius: 10px;
+      	position: absolute;
+      	background: conic-gradient(from var(--angle), transparent 2%, purple, blue);
+      	z-index: -1;
+      	padding: 3px;
+      	animation: spin 3s linear infinite;
+      }
+
+      .btn::before {
+      	filter: blur(1.5rem);
+      	opacity: 0.5;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      const container = document.getElementById('root');
+      const root = ReactDOM.createRoot(container);
+    
+      function Header({isi}) {
+        return (<h1>Hello, {isi ? isi : 'World'}!</h1>);
+      }
+
+      function Description({text}) {
+      	return (<p>{text ? text : 'Default Description'}</p>);
+      }
+
+      function Image({source}) {
+      	return (<img src={source ? source : './img/dugong-renang.jpg'} alt="My Image" />);
+      }
+
+      function Button({text}) {
+      	return (<button className="btn">{text ? text : 'Default'}</button>);
+      }
+
+      function HomePage() {
+        return (
+          <>
+            <Header text="Welcome to my Website !" />
+
+            <Description text="Here you can get a lot of Information about Swimming." />
+
+            <div className="imgs">
+	            <Image source="./img/kkkk.jpg" />
+	            <Image />
+	          </div>
+
+            <Description text="What do you waiting for Let's Join us !" />
+
+            <div className="btn-pr">
+            	<Button text="Join Now" />
+            </div>
+          </>
+        );
+      }
+
+      root.render(<HomePage />);
+
+    </script>
+  </body>
+</html>

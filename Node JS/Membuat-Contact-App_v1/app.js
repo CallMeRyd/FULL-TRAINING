@@ -22,12 +22,14 @@ if (!fs.existsSync(dataPath)) {
 
 
 // Pertanyaan
-const tanggapan = true;
 const tulisPertanyaan = (pertanyaan) => {
 	return new Promise((resolve, reject) => {
 		rl.question(pertanyaan, (nama) => {
-			if ( tanggapan ) {
-				resolve(nama);
+			const waktu = 500;
+			if ( waktu < 5000 ) {
+				setTimeout(() => {
+					resolve(nama);
+				}, waktu)
 			} else {
 				reject(`Gagal !!`);
 			}
@@ -37,20 +39,24 @@ const tulisPertanyaan = (pertanyaan) => {
 
 
 const main = async () => {
-	const nama = await tulisPertanyaan('Masukkan nama Anda : ');
-	const email = await tulisPertanyaan('Masukkan Email Anda : ');
-	const noHP = await tulisPertanyaan('Masukkan No HP Anda : ');
+	try {
+		const nama = await tulisPertanyaan('Masukkan nama Anda : ');
+		const email = await tulisPertanyaan('Masukkan Email Anda : ');
+		const noHP = await tulisPertanyaan('Masukkan No HP Anda : ');
 
-	const contact = { nama, email, noHP };
-	const fileBuffer = fs.readFileSync('./data/contacts.json', 'utf-8');
-	const contacts = JSON.parse(fileBuffer);
+		const contact = { nama, email, noHP };
+		const fileBuffer = fs.readFileSync('./data/contacts.json', 'utf-8');
+		const contacts = JSON.parse(fileBuffer);
 
-	contacts.push(contact);
+		contacts.push(contact);
 
-	fs.writeFileSync('./data/contacts.json', JSON.stringify(contacts));
+		fs.writeFileSync('./data/contacts.json', JSON.stringify(contacts));
 
-	console.log(`Terimakasih sudah memasukkan data.`);
-	rl.close();
+		console.log(`Terimakasih sudah memasukkan data.`);
+		rl.close();
+	} catch(err) {
+		console.log(`Gagal`);
+	}
 }
 
 

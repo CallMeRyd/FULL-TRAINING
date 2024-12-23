@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RYD | Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <!-- container -->
+    <div class="container">
+
+        <!-- Navbar -->
+        <header>
+            <section>
+                 <h1 class="oxygen-bold">RYD Merch Shop</h1>
+            </section>
+            <div class="right"> 
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="">GALLERY</a></li>
+                    <li><a href="">ABOUT</a></li>
+                </ul>
+                <button class="login oxygen-bold"><a href="login.html">LOGIN</a></button>
+            </div>
+        </header>
+
+
+        <!-- Login -->
+        <div class="login-box">
+            <h2>Login</h2>
+            <form action="proses_login.php" method="post" class="input-login">
+
+                <!-- Username -->
+                <div class="username-pr">
+                    <input type="text" id="username" name="username" required>
+                    <div class="input-logo"><i class="fa-solid fa-user"></i></div>
+                    <label for="username" class="label">Username</label>
+                </div>
+                
+                <!-- Password -->
+                <div class="password-pr input-box">
+                    <input type="password" id="password" name="password" required>
+                    <div class="input-logo"><i class="fa-solid fa-key"></i></div>
+                    <label for="password" class="label">Password</label>
+                </div>
+                
+                <!-- remember me -->
+                <div class="remember-pr input-box">
+                    <div class="remember">                      
+                        <label for="remember_me"><input type="checkbox" id="remember_me" name="remember_me">Ingat Saya</label>
+                    </div>
+                    <div class="forgot">
+                        <a href="">Forget Password</a>
+                    </div>
+                </div>
+
+                <!-- button -->
+                <input type="submit" value="Login" id="login">
+            </form> 
+        </div>
+    </div>
+
+<script src="js/javascript.js"></script>
+</body>
+</html>

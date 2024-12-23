@@ -1,0 +1,33 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: arial;
+}
+
+.hero {grid-area: hero;}
+.side {grid-area: side;}
+.bg-red {grid-area: bg-red;}
+.bg-grey {grid-area: bg-grey;}
+.bg-purple {grid-area: bg-purple;}
+.content {grid-area: content;}
+.footer {grid-area: footer;}
+
+main {
+	height: 100vh;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 10rem 200px auto 50px;
+	grid-template-areas: 
+		"	hero				hero				hero			side			"
+		"	bg-red			bg-red			bg-grey		side			"
+		"	bg-purple		content			content		side			"
+		"	footer			footer			footer	  footer		"
+	;
+}
+
+@media screen and (max-width: 1023px) { 
+	main {
+		grid-tmpae
+	}
+}

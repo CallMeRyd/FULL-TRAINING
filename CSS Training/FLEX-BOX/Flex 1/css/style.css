@@ -4,21 +4,29 @@
 	font-family: sans-serif, arial;
 }
 
+body {
+	background-color: #141414;
+}
 
-.container {
-	display: flex;
-	border: 3px solid;
-	width: 85%;
-	margin: 30px auto;
 /*	flex-direction: row | row-reverse | column | column-reverse;*/
 /*	flex-wrap: nowrap | wrap | wrap-reverse;*/
 /*	justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;*/
 /*	align-items: flex-start | flex-end | center | stretch | baseline;*/
 /*	align-content: flex-start | flex-end | center | stretch | space-between | space-around;*/
+
+.container {
+	display: flex;
+	border: 3px solid #fff;
+	width: 85%;
+	height: 90vh;
+	margin: 30px auto;
+	flex-direction: row;
+	justify-content: space-around;
 }
 
 
 .container div {
+	color: #eee;
 	width: 100px;
 	height: 100px;
 	background-color: rgb(19, 133, 255, 1.0);

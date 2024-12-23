@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>RYD | GRID</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+			font-family: sans-serif;
+		}
+
+		body {
+			background-color: #eee;
+		}
+
+		p {
+			font-size: 1.1rem;
+			color: #141414;
+		}
+
+		.header, .content, 
+		.ft-yellow, .ft-red, 
+		.ft-purple, .signup {
+			align-items: center;
+			justify-content: center;
+			display: grid;
+		}
+
+		.blue {
+			height: 2rem;
+			background-color: blue;
+		}
+
+		.header {
+			background-color: skyblue;
+		}
+
+		.content {
+			background-color: #fff;
+		}
+
+		.ft-yellow {
+			background-color: yellow;
+		}
+
+		.ft-red {
+			background-color: palevioletred;
+		}
+
+		.ft-purple {
+			background-color: mediumpurple;
+		}
+
+		.signup {
+			background-color: lightblue;
+		}
+
+	</style>
+</head>
+<body>
+
+	<header>
+		<nav>
+			<div class="blue"></div>
+		</nav>
+	</header>
+	
+	<main>
+		<div class="header"><p>HEADER</p></div>
+		<div class="content"><p>CONTENT</p></div>
+		<div class="signup"><p>SIGNUP</p></div>
+		<div class="ft-yellow"><p>FEATURE-YELLOW</p></div>
+		<div class="ft-red"><p>FEATURE-RED</p></div>
+		<div class="ft-purple"><p>FEATURE-PURPLE</p></div>
+	</main>
+
+</body>
+</html>

@@ -8,7 +8,7 @@
 
 	<!-- Bagian React -->
 	<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 
 	<!-- Bagian Dari JSX -->
 	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -17,18 +17,8 @@
 <body>
 	<!-- Bagian React -->
 	<div id="root"></div>
-
 	<div class="container">
-		<header>
-			<nav>
-				<div id="title">
-					<h2>REACT | DOM Manipulation</h1>
-				</div>
-			</nav>
-		</header>
-		
-		<div id="app"></div>
-	</div>
+	<div id="app"></div>
 	
 <script type="text/babel">	
 
@@ -41,10 +31,60 @@
 	tambahE.appendChild(tambahP);
 	app.appendChild(tambahE);
 
+// Class tidak bisa digunakan karena sudah di pakai, maka diganti className.
+// Harus ditutup (walaupun self close)
+
+// Core Consepts
+	// Components
+	// Props (bisa mengganti src, isi element, kata, property, DLL)
+	// State
+
 	// React JS
 	const container = document.getElementById('root'); // Bagian React
 	const root = ReactDOM.createRoot(container);
-	root.render(<h1>Mari Bermain Bersama!!</h1>);
+
+	function Header({name}) {
+		return (<h1 className="heading">Mari Bermain Bersama {name ? name : 'Ryd'} !!</h1>); 
+	}
+
+	function Gambar({sumber}) {
+	 	return (<img src={sumber ? sumber : "dugong-renang.jpg"} alt="My Image" />);
+	} 
+
+	function Deskripsi({isi}) {	
+		return (<p>Belajar React itu mudah !!!</p>);
+	}
+
+	function HomePage() {
+		const students = ['Call Me Ryd', 'MiauAug', 'Windah Batu Bara'];
+		const [likes, setLikes] = React.useState(0);
+
+		function handleClick() {
+			setLikes(likes + 1);
+		}
+
+		return (
+			<>
+				<Header />
+				<Header name="Codot"/>
+
+				<Gambar />
+				<Gambar sumber="kkkk.jpg"/>
+
+				<ul>
+					{students.map((student) => (
+						<li key={student}>{student}</li>
+					))}
+				</ul>
+
+				<Deskripsi />
+
+				<button onClick={handleClick}>Like ({likes})</button>
+			</>
+		);
+	}
+
+	root.render(<HomePage />);
 
 </script>
 </body>

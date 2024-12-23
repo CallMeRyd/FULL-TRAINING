@@ -1,6 +1,4 @@
 * {
-	padding: 0;
-	margin: 0;
 	box-sizing: border-box;
 	font-family: arial;
 }
@@ -49,5 +47,9 @@ a {
 }
 
 ul li {
-	list-style: none;
+	color: #eee;
+}
+
+img {
+	width: 200px;
 }
