@@ -55,7 +55,7 @@ void totalBelanja(int priceAmount, double diskon) {
 	cout << "Harga Akhir \t\t: Rp." << totalAkhir << endl;
 }
 
-void prosesPilihanMenu(vector<Barang> barang, int pilihan, int jumlahBarang, double diskon) {
+void prosesPilihanMenu(vector<Barang> barang, vector<Barang> keranjang, int pilihan, int jumlahBarang, double diskon) {
 	int amount;
 	string cpPremium, kataKunci, kategori;
 	if (pilihan == 1) {
@@ -111,6 +111,8 @@ int main() {
 		{"Admin", 					"admin123"},
 	};
 	
+	vector<Barang> keranjang;
+	
     vector<Barang> barang = {
     	//	Nama					Harga		Kategori		Diskon
         {"Pemrograman C++", 		100000, 	"Buku",			50		},
@@ -164,7 +166,7 @@ int main() {
 					/* Keranjang (Soon) */
 					
 					cout << "Pilih Menu : "; cin >> pilihan;
-					prosesPilihanMenu(barang, pilihan, jumlahBarang, diskon);					
+					prosesPilihanMenu(barang, keranjang, pilihan, jumlahBarang, diskon);					
 					cout << "Ulangi Berbelanja : "; cin >> lanjut;
 					
 				} while (lanjut == "y");
