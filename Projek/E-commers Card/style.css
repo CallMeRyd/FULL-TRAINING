@@ -1,0 +1,775 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+	color: #eee;
+}
+
+.blury {
+	backdrop-filter: blur(5px);
+}
+
+a {
+	color: #eee;
+	text-decoration: none;
+}
+
+.container {
+	height: 100vh;
+	background: url("bg-white.jpg") no-repeat center;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+}
+
+button {
+	cursor: pointer;
+}
+
+
+
+/* Fonts */
+.roboto-command {
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.phudu-command {
+  font-family: "Phudu", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.poppins-thin {
+  font-family: "Poppins", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
+/* Navbar */
+nav {
+	width: 100%;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	z-index: 999;
+}
+
+nav .nav-content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 95%;
+}
+
+nav .nav-content .logo {
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100px;
+	height: 3rem;
+	font-size: 1.5rem;
+	font-weight: bold;
+	transition: .3s linear;
+	border: none;
+	background: url("logoH.png") no-repeat center;
+	background-size: contain;
+}
+
+nav .nav-content ul {
+	display: flex;
+	gap: 50px;
+}
+
+nav .nav-content ul li {
+	display: flex;
+	list-style: none;
+}
+
+nav .nav-content ul li a {
+	color: #424242;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100px;
+	height: 2rem;
+	position: relative;
+	transition: .3s linear;
+}
+
+nav .nav-content ul li a:hover {
+	color: #000;
+}
+
+nav .nav-content ul li a::before {
+	content: '';
+	position: absolute;
+	background-color: #000;
+	width: 100%;
+	height: 2px;
+	border-radius: 30px;
+	bottom: 0;
+	transform: scaleX(0);
+	transition: transform .3s linear;
+}
+
+nav .nav-content ul li a:hover::before {
+	transform: scaleX(1.0);
+}
+
+nav .nav-content ul li .active {
+	font-weight: bold;
+	color: #000;
+}
+
+.container .hero {
+	display: flex;
+	justify-content: center;
+	align-items: end;
+	height: 95vh;
+}
+
+
+
+/* Card */
+.card {
+	width: 280px;
+	position: relative;
+}
+
+.card .condition {
+	display: flex;
+	width: 43%;
+	height: 60px;
+	border-radius: 30px;
+	position: absolute;
+	background-color: #000;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	right: 0;
+}
+
+.card .title {
+	background-color: #000;
+	display: flex;
+	align-items: center;
+	padding: 0 20px;
+	justify-content: space-between;
+	width: 54%;
+	height: 70px;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+}
+
+.card .title .logo {
+	background: url("logo.jpg") no-repeat center;
+	background-size: cover;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+
+.card .title .down {
+	display: flex;
+	flex-direction: column;
+}
+
+.card .title .down h1 {
+	font-size: 1.3rem;
+}
+
+.card .title .down p {
+	font-size: 0.6rem;
+}
+
+.card .img {
+	height: 400px;
+	width: 100%;
+	border-top-right-radius: 30px;
+	background-color: #000;	
+}
+
+.card .img .card-img {
+	height: 100%;
+	width: 100%;
+	background: url("assassins_creed.png") no-repeat center;
+	background-size: contain;
+	transform: scale(1.0);
+	transition: .3s ease-in-out;
+}
+
+.card .img .card-img:hover {
+	transform: scale(1.1);
+}
+
+.card .card-content {
+	width: 100%;
+	background-color: #000;
+	padding: 20px;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+}
+
+.card .card-content .up {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card .card-content .up .left h1 {
+	font-size: 2rem;
+}
+
+.card .card-content .up h2 {
+	font-size: 2rem;
+}
+
+.card .card-content .down {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 30px;
+}
+
+.card .card-content .down .btns {
+	display: flex;
+	justify-content: space-between;
+	width: 60%;
+	gap: 10px;
+}
+
+.card .card-content .down .btns button {
+	transition: .3s ease-in-out;
+	background-color: #141414;
+	cursor: pointer;
+}
+
+.card .card-content .down .btns button:hover {
+	background-color: grey;
+}
+
+.card .card-content .down .btns .btn-info {
+	width: 200px;
+	border-radius: 30px;
+	height: 30px;
+}
+
+.card .card-content .down .btns .btn-keranjang {
+	width: 100px;
+	border-radius: 30px;
+}
+
+.card .card-content .down ul {
+	display: flex;
+}
+
+.card .card-content .down ul {
+	display: flex;
+	gap: 3px;
+}
+
+.card .card-content .down ul li {
+	display: flex;
+	list-style: none;
+}
+
+.card .card-content .down ul li a {
+	border: 2px solid #141414;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+}
+
+.card .card-content .down ul li .brown { background-color: brown; }
+.card .card-content .down ul li .blue { background-color: blue; }
+.card .card-content .down ul li .red { background-color: red; }
+.card .card-content .down ul li .white { background-color: white; }
+
+
+
+/* Deskkrip */
+.deskrip {
+	display: block;
+	width: 0;
+	height: 575px;
+	position: relative;
+	transition: 1s ease-in-out;
+	overflow: hidden;
+	filter: blur(5px);
+}
+
+.open {
+	margin-left: 20px;
+	width: 50%;
+	filter: blur(0);
+}
+
+.bg-black {
+	background: #000;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+	overflow: hidden;
+}
+
+.deskrip .bg-img {
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+	background: url("assassins_creed.png") no-repeat center;
+	background-size: contain;
+	height: 525px;
+}
+
+.deskrip .bg-img .deskrip-value {
+	display: flex;
+	flex-direction: column;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+	padding: 20px;
+	height: 100%;
+}
+
+.deskrip .bg-img .deskrip-value .title {}
+
+.deskrip .bg-img .deskrip-value .title .up h1 {
+	height: 40px;
+	width: 400px;
+	border-bottom: 4px solid;
+}
+
+.deskrip .bg-img .deskrip-value .title p {
+	margin-top: 3px;
+	font-style: italic;
+}
+
+.deskrip .bg-img .deskrip-value .paragrph {
+	padding: 20px;
+}
+
+.deskrip .bg-img .deskrip-value .paragrph p {
+	font-size: 0.9rem;
+	margin-top: 5px;
+}
+
+.deskrip .btns {
+	display: flex;
+	justify-content: start;
+	height: 50px;
+	width: 100%;
+	position: absolute;
+}
+
+.deskrip .btns .footer {
+	background: #000;
+	width: 60%;
+	border-bottom-left-radius: 30px;
+	border-bottom-Right-radius: 30px;
+	align-items: center;
+	display: flex;
+	overflow: hidden;
+}
+
+.deskrip .btns .footer p {
+	padding: 20px;
+	font-size: 0.8rem;
+	font-style: italic;
+}
+
+.deskrip .btns .btns-value {
+	display: flex;
+	justify-content: end;
+	position: absolute;
+	width: 40%;
+	bottom: 0;
+	right: 0;
+	gap: 10px;
+}
+
+.deskrip .btns .btns-value button {
+	border: none;
+	background: #000;
+	border-radius: 30px;
+	width: 40%;
+	height: 45px;
+	cursor: pointer;
+	transition: .3s ease-in-out;
+}
+
+.deskrip .btns .btns-value button:hover {
+	background: #141414;
+}
+
+
+
+
+/* === Index === */
+.container1 {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	background: url("bg1-edited.jpg") no-repeat; center;
+	background-size: cover;
+}
+
+.bg1 {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	backdrop-filter: blur(5px);
+	background: url("logo2.png") no-repeat center;
+	background-size: contain;
+}
+
+.bg1 .bg-logo {
+	width: 95%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+
+.bg1 .bg-logo .bg2-char {
+	width: 100%;
+	height: 100%;
+	background: url("bg2-char.png") no-repeat center;
+	background-size: contain;
+	z-index: 1;
+	top: 0;
+	position: absolute;
+}
+
+.bg1 .bg-logo .title {
+	width: 100%;
+	margin-left: 45px;
+	position: relative;
+}
+
+.bg1 .bg-logo .title h2 {
+	font-family: "Roboto";
+	font-size: 1rem;
+}
+
+.bg1 .bg-logo .title h1 {
+	font-family: "Phudu";
+	line-height: 8rem;
+	font-size: 10rem;
+	text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.bg1 .bg-logo .title .btn-add-fav {
+	cursor: pointer;
+	width: 10rem;
+	height: 2rem;
+	border: none;
+	margin-top: 20px;
+	background-color: darkred;
+	transition: .3s ease-in-out;
+	position: relative;
+	z-index: 3;
+}
+
+.bg1 .bg-logo .title .btn-add-fav:hover {
+	background-color: indianred;
+}
+
+.bg1 .bg-logo .hero-value {
+	width: 50%;
+	margin-bottom: 50px;
+	gap: 6px;
+	display: flex;
+	flex-direction: column;
+}
+
+.bg1 .bg-logo .hero-value .warning {
+	width: 300px;
+	border-bottom: 1px solid;
+	text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.bg1 .bg-logo .hero-value .detail {
+	display: flex;
+}
+
+.bg1 .bg-logo .hero-value .detail ul {
+	display: flex;
+}
+
+.bg1 .bg-logo .hero-value .detail ul li {
+	text-align: center;
+	width: 60px;
+	list-style: none;
+}
+
+.bg1 .bg-logo .hero-value .detail ul li a {
+	color: inherit;
+	padding: 0 3px;
+	text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.bg1 .bg-logo .hero-value .detail ul li:nth-child(1) {border-right: 2px solid;}
+.bg1 .bg-logo .hero-value .detail ul li:nth-child(2) {border-right: 2px solid;}
+.bg1 .bg-logo .hero-value .detail ul li:nth-child(3) {border-right: 2px solid;}
+.bg1 .bg-logo .hero-value .detail ul li:nth-child(2) a {background-color: darkred;}
+
+.bg1 .bg-logo .hero-value p {
+	text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.bg1 .bg-logo .hero-value .btns {
+	margin-top: 20px;
+	display: flex;
+	gap: 20px;
+}
+
+.bg1 .bg-logo .hero-value .btns button {
+	width: 8rem;
+	height: 2.5rem;
+	border: 1px solid;
+}
+
+.bg1 .bg-logo .hero-value .btns .btn-download {
+	background-color: darkred;
+	border: none;
+	transition: .3s ease-in-out;
+	z-index: 3;
+}
+
+.bg1 .bg-logo .hero-value .btns .btn-download:hover {
+	background: indianred;
+}
+
+.bg1 .bg-logo .hero-value .btns .btn-add-cart {
+	background: transparent;
+	transition: .3s ease-in-out;
+	z-index: 3;
+}
+
+.bg1 .bg-logo .hero-value .btns .btn-add-cart:hover {
+	background-color: indianred;
+	border: none;
+}
+
+.bg1 .bg-logo .footer {
+	display: flex;
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 20px;
+	justify-content: space-between;
+	width: 100%;
+	align-items: end;
+}
+
+.bg1 .bg-logo .footer p {
+	font-size: 0.8rem;
+}
+
+.bg1 .bg-logo .footer ul {
+	display: flex;
+	gap: 20px;
+	position: absolute;
+	z-index: 3;
+	width: 100%;
+	justify-content: center;
+}
+
+.bg1 .bg-logo .footer ul li a {
+	text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+	font-size: 1.5rem;
+}
+
+.bg1 .bg-logo .footer ul li a i {
+	transition: .3s ease-in-out;
+}
+
+.bg1 .bg-logo .footer ul li a i:hover {
+	color: darkred;
+}
+
+.bg1 .bg-logo .footer ul li {
+	list-style: none;
+}
+
+.bg1 .bg-logo .other {
+	position: absolute;
+	background: rgba(0, 0, 0, 0.3);
+	backdrop-filter: blur(10px);
+	border-radius: 30px;
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	right: 0;
+	bottom: 0;
+	margin: 20px;
+	width: 34%;
+	z-index: 3;
+}
+
+.bg1 .bg-logo .other ul {
+	margin-top: 10px;
+	display: flex;
+	gap: 10px;
+}
+
+.bg1 .bg-logo .other ul li {
+	border: 1px solid;
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 7rem;
+	height: 7rem;
+	border-radius: 30px;
+	overflow: hidden;
+	transition: .3s ease-in-out;
+}
+
+.bg1 .bg-logo .other ul li .char1 {background: url("char1.png") no-repeat top; background-size: 200%;}
+.bg1 .bg-logo .other ul li .char2 {background: url("char2.png") no-repeat top; background-size: 200%;}
+.bg1 .bg-logo .other ul li .char3 {background: url("char3.png") no-repeat top; background-size: 200%;}
+.bg1 .bg-logo .other ul li .char4 {background: url("assassins_creed.png") no-repeat top; background-size: 150%;}
+
+.bg1 .bg-logo .other ul li a {
+	z-index: 3;
+	padding: 3.5rem;
+	background-size: cover;
+	transition: .3s ease-in-out;
+	transform: scale(1.0);
+}
+
+.bg1 .bg-logo .other ul li a:hover {
+	transform: scale(1.1);
+}
+
+.bg1 .bg-logo .other ul li:hover {
+	background-color: lightgray;
+}
+
+
+@media (max-width: 1238px) {
+	.bg1 {
+		background: url("logo2.png") no-repeat center;
+		background-size: contain;
+	}
+}
+
+@media (max-width: 992px) {
+	.bg1 .bg-logo .hero-value {
+		margin-bottom: 150px;
+	}
+}
